@@ -13,7 +13,9 @@ if (dateElement) {
 }
 
 // use the date object
-const today = new Date("16/5/2026");
+const today = new Date();
+new Date().toISOString();
+'2026-05-16T09:27.:18Z'
 
 full.innerHTML = `Today is <span class="highlight">${new Intl.DateTimeFormat(
     "en-US",
@@ -48,3 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("your-id").innerHTML = "Your Date Here";
 });
 document.getElementById("lastModified").innerHTML = document.lastModified;
+document.getElementById('dateDisplay').innerHTML = today.toDateString();
+document.getElementById('timeDisplay').innerHTML = today.toLocaleTimeString();
+document.getElementById('fullDate').innerHTML = ${ today.getFullYear() } - ${ String(today.getMonth() + 1).padStart(2, '0') } - ${ String(today.getDate()).padStart(2, '0') };
