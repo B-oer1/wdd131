@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 :root {
+    --border: 1px solid rgba(5, 4, 4, 0.1);
     --primary-color: rgb(22, 167, 192);
     --secondary-color: rgb(107, 17, 88);
     --heading-font: "Times New Roman", "Georgia", serif;
@@ -19,29 +20,43 @@ body {
     font-family: var(--body-font);
 }
 
-div {
+
+
+div,
+.sep {
     display: grid;
     align-items: center;
 }
 
 #about {
     grid-column: 1/3;
+    grid-row: 1/2;
     margin: 1rem;
 }
 
+.card1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .card1 img {
-    width: 250px;
+    width: 220px;
     height: auto;
     float: right;
     margin-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 5px;
 }
 
 #dev {
     grid-column: 3/4;
+    grid-row: 1/2;
     margin: 1rem;
 }
 
-#course-title {
+#course-title,
+span {
     background-color: var(--secondary-color);
     font-size: 2rem;
 }
@@ -53,7 +68,8 @@ h2 {
 }
 
 #course-title,
-nav a {
+nav a,
+span {
     display: block;
 }
 
@@ -84,4 +100,27 @@ nav a {
 h1,
 h2 {
     color: black;
+}
+
+h2 {
+    border-bottom: var(--border);
+}
+
+.card2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card2 img {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+span {
+    font-weight: 100;
 }
