@@ -66,6 +66,10 @@ div,
 span,
 footer {
     background-color: var(--secondary-color);
+}
+
+#course-title,
+span {
     font-size: 2rem;
 }
 
@@ -86,11 +90,12 @@ nav {
 
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
+nav ul,
+{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+list-style-type: none;
 }
 
 nav li {
