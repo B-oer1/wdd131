@@ -8,7 +8,7 @@
 
 :root {
     --border: 1px solid rgba(5, 4, 4, 0.1);
-    --primary-color: rgb(22, 167, 192);
+    --primary-color: rgb(6, 13, 109);
     --secondary-color: rgb(107, 17, 88);
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -16,8 +16,17 @@
 
 main,
 footer,
-header,
 .sep {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+header {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+main {
     margin: 0 auto;
     max-width: 100%;
 }
