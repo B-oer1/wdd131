@@ -19,7 +19,7 @@ footer,
 header,
 .sep {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 div,
 .sep {
     display: grid;
-    align-items: center;
+    align-items: start;
 }
 
 #about {
@@ -39,6 +39,10 @@ div,
     grid-row: 1/2;
     margin: 1rem;
     padding: 30px;
+}
+
+.card {
+    grid-row: 1;
 }
 
 .card1 {
@@ -140,4 +144,11 @@ h2 {
 
 span {
     font-weight: 100;
+}
+
+p ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: circle;
 }
