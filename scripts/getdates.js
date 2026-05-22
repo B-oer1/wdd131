@@ -2,7 +2,7 @@ const today = new Date();
 
 const dateElement = document.getElementById("lastModified");
 if (dateElement) {
-    dateElement.innerHTML = today.toDateString();
+    dateElement.innerHTML = today.toISOString();
 }
 
 const yearElement = document.getElementById("currentyear");
