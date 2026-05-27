@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --border: 1px solid rgb(12, 10, 10);
+    --primary-color: rgb(205, 174, 228);
+    --secondary-color: rgb(5, 97, 100);
+    --heading-font: "Times New Roman", 'Roboto', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    font-weight: 200;
+}
+
+header,
+main,
+footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: var(--border);
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+section {
+    color: white;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+}

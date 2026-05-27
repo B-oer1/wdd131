@@ -140,7 +140,7 @@ h2 {
 
 #dev,
 .sep {
-    border-bottom: var(--border);
+    border: var(--border);
 }
 
 .card2 {
