@@ -80,7 +80,8 @@
         text-align: center;
     }
 
-    .img-container {
+    .img-container,
+    .off-screen-menu ul {
         display: flex;
         flex-direction: column;
     }
