@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Place - Oladele Blessed</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Oladele Blessed My course landing page.">
+    <meta name="author" content="Oladele Blessed">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nigeria</h1>
+        <p class="tagline">Gaint of Africa 🦁</p>
+    </header>
+
+    <div class="hero">
+        <picture>
+            <source media="(min-width: 768px)" srcset="images/fct-abuja.webp">
+            <img src="images/fct-abuja.webp" alt="Aerial view of FCT, Nigeria" width="1200" height="600"
+                loading="eager" />
+        </picture>
+        <div class="container">
+            <section class="data">
+                <h2 class="data-heading">Data</h2>
+                <div class="data-content">
+                    <div class="data-details">
+                        <p><strong>Area:</strong> 356,667 sq km</p>
+                        <p><strong>Population:</strong> 242,000,000</p>
+                        <p><strong>Capital:</strong> Abuja</p>
+                        <p><strong>Language:</strong> English (Official)</p>
+                        <p><strong>Currency:</strong> Nigerian Naira (NGN)</p>
+                        <p><strong>Time Zone:</strong> West Africa Time or UTC+1</p>
+                        <p><strong>Calling code:</strong> +234</p>
+                        <p><strong>Internet TLD:</strong> .ng</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather">
+                <h2 class="weather-heading">Data <span class="weather-icon">⛅</span></h2>
+                <div class="weather-content">
+                    <div class="weather-details">
+                        <p><strong>Location:</strong> Abuja, Nigeria</p>
+                        <p><strong>Temperature:</strong> 32°C (90°F)</p>
+                        <p><strong>Wind Speed:</strong> 14 km/h</p>
+                        <p><strong>Conditions:</strong> Partly Sunny ⛅</p>
+                        <p><strong>Wind Chill Factor:</strong> <span id="wind-chill">Calculating...</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <main>
+        <!-- main can be minimal since content is in hero -->
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> ❤️‍🔥 Oladele Blessed ❤️‍🔥 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

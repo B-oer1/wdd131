@@ -1,0 +1,43 @@
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .hero picture,
+    .hero img {
+        height: 500px;
+    }
+
+    .weather-heading::after,
+    .data-heading::after {
+        display: inline;
+    }
+
+    .weather-mobile-icon {
+        display: none;
+    }
+
+    .weather-content,
+    .data-content {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+
+    main {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+}
+
+@media (min-width: 480px) {
+    .container {
+        display: flex;
+        direction: column;
+        align-items: center;
+    }
+
+    .hero picture,
+    .hero img {
+        height: 560px;
+    }
+}
