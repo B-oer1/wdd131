@@ -188,14 +188,15 @@ document.querySelector("#home").addEventListener("click", (e) => {
 
 document.querySelector("#old").addEventListener("click", (e) => {
     e.preventDefault();
-    pageTitle.textContent = "Old (before 1900)";
-    createTempleCard(temples.filter(temple => getDedicationYear(temple) < 1900));
+    // pageTitle.textContent = "Old (before 1900)";
+    // createTempleCard(temples.filter(temple => { getDedicationYear(parseInt(temple.dedicated)) < 1900; console.log(temple) }));
+    createTempleCard(temples.filter(temple => getDedicatedYear(temple) < 1900));
 });
 
 document.querySelector("#new").addEventListener("click", (e) => {
     e.preventDefault();
-    pageTitle.textContent = "New (after 2000)";
-    createTempleCard(temples.filter(temple => getDedicationYear(temple) > 2000));
+    // pageTitle.textContent = "New (after 2000)";
+    createTempleCard(temples.filter(temple => getDedicatedYear(temple) > 2000));
 });
 
 document.querySelector("#large").addEventListener("click", (e) => {

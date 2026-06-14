@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --border: 1px solid rgb(12, 10, 10);
+    --primary-color: rgb(9, 143, 15);
+    --secondary-color: rgb(119, 6, 119);
+    --heading-font: "League Spartan", "Times New Roman", serif;
+    --body-font: "Roboto", sans-serif;
+}
