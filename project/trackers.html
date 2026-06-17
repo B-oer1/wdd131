@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripture Engine | Disciples Word Club</title>
+    <meta name="description" content="Interactive multi-month Bible reading plan tracker utilizing persistent state management.">
+    <meta name="author" content="Oladele Blessed">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/bible-svgrepo-com.svg" alt="Disciple Bible Logo" width="70" height="70" loading="eager">
+                <span class="brand-title">Disciples Word Club</span>
+            </div>
+            <a href="#" id="hambutton" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <nav id="navmenu">
+                <a href="siteplan.html">Site Plan</a>
+                <a href="trackers.html" class="active">Reading Trackers</a>
+                <a href="reviews.html">Reviews & Testimonies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="card sync-panel">
+            <h2>Accountability Registration</h2>
+            <div class="name-input" id="nameSection">
+                <input type="text" id="nameInput" placeholder="Enter your full name" aria-label="User name input">
+                <button type="button" id="btnSaveName">Initialize Engine</button>
+            </div>
+            <div class="welcome" id="welcomeText" style="display:none;"></div>
+        </section>
+
+        <section class="card tracking-dashboard">
+            <h2>Live Metric Dashboard</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">0%</div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="completedDays">0</div>
+                    <div class="stat-label">Days Logged</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="totalReadings">0</div>
+                    <div class="stat-label">Readings Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="remainingDays">60</div>
+                    <div class="stat-label">Days Left</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tracker-controls">
+            <div class="card selector-card">
+                <label for="planSelect">Select Reading Horizon Track:</label>
+                <select id="planSelect">
+                    <option value="60" selected>High Intensity Track (2 Months / 60 Days)</option>
+                    <option value="90">Standard Core Track (3 Months / 90 Days)</option>
+                    <option value="180">Balanced Growth Track (6 Months / 180 Days)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="content-accordion" id="contentAccordion"></section>
+
+        <div class="action-container">
+            <button class="reset-button" type="button" id="btnResetProgress">Hard Reset Session Progress</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footcon">
+            <p>&copy;<span id="currentyear"></span> 🔥 Oladele Blessed 🔥 Nigeria</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+            <p><a href="references.html" class="ref-link">Project References Page</a></p>
+        </div>
+        <nav class="socialmedia">
+            <a href="https://discord.com" target="_blank" rel="noopener"><img src="images/discord-icon-svgrepo-com.svg" alt="Discord" width="20" height="20" loading="lazy"></a>
+            <a href="https://snapchat.com" target="_blank" rel="noopener"><img src="images/snapchat-logo-svgrepo-com.svg" alt="Snapchat" width="20" height="20" loading="lazy"></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener"><img src="images/tiktok-svgrepo-com.svg" alt="TikTok" width="20" height="20" loading="lazy"></a>
+        </nav>
+    </footer>
+</body>
+</html>

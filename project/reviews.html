@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Hub | Disciples Word Club</title>
+    <meta name="description" content="Submit structural program evaluations and read live human accountability reports.">
+    <meta name="author" content="Oladele Blessed">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/bible-svgrepo-com.svg" alt="Disciple Bible Logo" width="70" height="70" loading="eager">
+                <span class="brand-title">Disciples Word Club</span>
+            </div>
+            <a href="#" id="hambutton" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <nav id="navmenu">
+                <a href="siteplan.html">Site Plan</a>
+                <a href="trackers.html">Reading Trackers</a>
+                <a href="reviews.html" class="active">Reviews & Testimonies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="grid-two-col">
+            <!-- Review Submission Form Form Element -->
+            <div class="card">
+                <h2>Product Review Form</h2>
+                <p class="form-instruction">Fields marked with <span class="req">*</span> are explicitly required.</p>
+                
+                <form method="get" action="reviews.html" id="reviewForm" class="styled-form">
+                    <div class="form-group">
+                        <label for="productName">Target Reading Track <span class="req">*</span></label>
+                        <select id="productName" name="productName" required>
+                            <option value="" disabled selected>Select a Product ...</option>
+                            <!-- Programmatically loaded via JS -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Overall Tracker Rating <span class="req">*</span></label>
+                        <div class="star-rating-group" role="radiogroup" aria-label="Star rating selection">
+                            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">☆</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">☆</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">☆</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">☆</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">☆</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateInstall">Date of System Onboarding <span class="req">*</span></label>
+                        <input type="date" id="dateInstall" name="dateInstall" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Highly Useful Infrastructure Features</label>
+                        <div class="checkbox-row">
+                            <label class="check-label"><input type="checkbox" name="features" value="accordion"> Multi-Accordion Views</label>
+                            <label class="check-label"><input type="checkbox" name="features" value="localstorage"> LocalStorage Mirroring</label>
+                            <label class="check-label"><input type="checkbox" name="features" value="metrics"> Real-time Performance Metrics</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="writtenReview">Detailed System Feedback <span class="optional">(Optional)</span></label>
+                        <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Share your experience working through your current plan details..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewerName">Your Profile Identifier <span class="optional">(Optional)</span></label>
+                        <input type="text" id="reviewerName" name="reviewerName" placeholder="e.g. Brother Blessed">
+                    </div>
+
+                    <button type="submit" class="submit-button">Log Review Record</button>
+                </form>
+            </div>
+
+            <!-- Verified Testimonies Wall Component -->
+            <div class="card testimonies-panel">
+                <h2>Verified Human Testimony Wall</h2>
+                <div class="reviews-counter-badge">
+                    Total Reviews Logged Globally: <span id="localReviewCount">0</span>
+                </div>
+                
+                <div class="testimony-card marquee-style">
+                    <blockquote>
+                        "I want to thank God for Disciple Word Club, I have gained a consistent Bible intake lifestyle and now everything makes sense in my life because God's word is the answer to all of Humanities problems and questions."
+                    </blockquote>
+                    <cite>— System Verified Onboarding Board Member</cite>
+                </div>
+                <div id="dynamicReviewsTarget"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footcon">
+            <p>&copy;<span id="currentyear"></span> 🔥 Oladele Blessed 🔥 Nigeria</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+            <p><a href="references.html" class="ref-link">Project References Page</a></p>
+        </div>
+        <nav class="socialmedia">
+            <a href="https://discord.com" target="_blank" rel="noopener"><img src="images/discord-icon-svgrepo-com.svg" alt="Discord" width="20" height="20" loading="lazy"></a>
+            <a href="https://snapchat.com" target="_blank" rel="noopener"><img src="images/snapchat-logo-svgrepo-com.svg" alt="Snapchat" width="20" height="20" loading="lazy"></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener"><img src="images/tiktok-svgrepo-com.svg" alt="TikTok" width="20" height="20" loading="lazy"></a>
+        </nav>
+    </footer>
+</body>
+</html>

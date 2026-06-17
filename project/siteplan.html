@@ -1,64 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <meta name="description"
-        content="Final project for WDD 131 - Dynamic Web Fundamentals. Building a website for beiliver using accountablity and follow-up principles ensuring they a built and rooted in God's word, the Bible.">
+    <title>Site Plan | Disciples Word Club</title>
+    <meta name="description" content="Design blueprint and architectural documentation for Disciples Word Club project.">
     <meta name="author" content="Oladele Blessed">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="styles/siteplan.css">
     <link rel="stylesheet" href="styles/siteplan-large.css">
     <script src="scripts/siteplan.js" defer></script>
 </head>
-
 <body>
     <header>
-        <img src="images/bible-svgrepo-com.svg" alt="Disciple Bible Logo">
-        <a href="#" id="hambutton" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        <nav id="navmenu">
-            <a href="#" id="home">Home</a>
-            <a href="#" id="old">About Us</a>
-            <a href="#" id="new">Testimonies</a>
-            <a href="#" id="large">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <div class="sitecon">
-            <h1 class="siten">Disciples Word Club</h1>
-            <span>This name represents a club that  focuses the Word in-take for beleivers globally.</span>
-            <h2 class="sitep">for the Disciples Word Club</h2>
-            <span>The site provides a community for believers using accountability & strutured plan to help believer's "finish" complete their Bible reading at least once in a year using various Bible study plans such as 2-month, 3-months and 6-months.</span>
-            <h3 class="sites">Scenarios</h3>
-            <ul>
-                <li>What is the most preffered reading plan?</li>
-                <li>How can I access the Bible Tacker?</li>
-                <li>Who follows up on me when I am lagging back?</li>
-            </ul>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/bible-svgrepo-com.svg" alt="Disciple Bible Logo" width="70" height="70" loading="eager">
+                <span class="brand-title">Disciples Word Club</span>
+            </div>
+            <a href="#" id="hambutton" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <nav id="navmenu">
+                <a href="siteplan.html" class="active">Site Plan</a>
+                <a href="trackers.html">Reading Trackers</a>
+                <a href="reviews.html">Reviews & Testimonies</a>
+            </nav>
         </div>
+    </header>
+
+    <main>
+        <section class="card plan-hero">
+            <h1>Website Architecture Document</h1>
+            <p class="subtitle">Structured Infrastructure Plan for Scaling Scripture Engagement</p>
+        </section>
+
+        <section class="grid-two-col">
+            <div class="card">
+                <h2>Strategic Overview</h2>
+                <div class="meta-group">
+                    <h3>Site Name</h3>
+                    <p><strong>Disciples Word Club</strong></p>
+                    <p>Chosen to represent an intentional global community centered entirely on regular, high-density scripture intake.</p>
+                </div>
+                <div class="meta-group">
+                    <h3>Site Purpose</h3>
+                    <p>To provide believers globally with structural frameworks, tracking tools, and social accountability mechanics necessary to finish reading the complete Bible within targeted yearly horizons.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>User Scenarios</h2>
+                <ul class="scenario-list">
+                    <li>
+                        <strong>Scenario 1:</strong> 
+                        <p>"What is the most preferred structured reading plan for a busy schedule?"</p>
+                    </li>
+                    <li>
+                        <strong>Scenario 2:</strong> 
+                        <p>"How can I access my custom Bible tracker and view real-time metrics?"</p>
+                    </li>
+                    <li>
+                        <strong>Scenario 3:</strong> 
+                        <p>"Who follows up on me or keeps me accountable when I begin lagging behind?"</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card spec-sheet">
+            <h2>Design System Verification</h2>
+            <p>This plan document maps, implements, and mirrors the absolute visual constraints defined in the project guidelines below:</p>
+            
+            <div class="spec-grid">
+                <div class="spec-box color-p">
+                    <strong>Primary Color</strong>
+                    <span>rgb(119, 6, 119)</span>
+                </div>
+                <div class="spec-box color-s">
+                    <strong>Secondary Color</strong>
+                    <span>rgb(9, 143, 15)</span>
+                </div>
+                <div class="spec-box font-h">
+                    <strong>Headings Font</strong>
+                    <span>League Spartan (Serif Fallback)</span>
+                </div>
+                <div class="spec-box font-b">
+                    <strong>Body Typography</strong>
+                    <span>Roboto (Sans-Serif Fallback)</span>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="footcon">
-            <p>&copy;<span id="currentyear"></span> ❤️‍🔥 Oladele Blessed ❤️‍🔥 Nigeria</p>
+            <p>&copy;<span id="currentyear"></span> 🔥 Oladele Blessed 🔥 Nigeria</p>
             <p>Last Modification: <span id="lastModified"></span></p>
+            <p><a href="references.html" class="ref-link">Project References Page</a></p>
         </div>
         <nav class="socialmedia">
-            <a href="https://discord.com"> <img src="images/discord-icon-svgrepo-com.svg" alt="Discord Icon"
-                    width="20"></a>
-            <a href="https://snapchat.com"> <img src="images/snapchat-logo-svgrepo-com.svg" alt="Snapchat Icon"
-                    width="20"></a>
-            <a href="https://tiktok.com"> <img src="images/tiktok-svgrepo-com.svg" alt="Tiktok Icon" width="20"></a>
+            <a href="https://discord.com" target="_blank" rel="noopener"><img src="images/discord-icon-svgrepo-com.svg" alt="Discord" width="20" height="20" loading="lazy"></a>
+            <a href="https://snapchat.com" target="_blank" rel="noopener"><img src="images/snapchat-logo-svgrepo-com.svg" alt="Snapchat" width="20" height="20" loading="lazy"></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener"><img src="images/tiktok-svgrepo-com.svg" alt="TikTok" width="20" height="20" loading="lazy"></a>
         </nav>
     </footer>
 </body>
-
 </html>
