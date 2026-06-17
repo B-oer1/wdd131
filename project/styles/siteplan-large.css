@@ -1,0 +1,69 @@
+@media screen and (max-width: 560px) {
+
+    header {
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+    }
+
+    #hambutton {
+        display: flex;
+    }
+
+    /* Off-screen slide-in nav */
+    nav#navmenu {
+        background-color: var(--secondary-color);
+        height: 100vh;
+        width: 75%;
+        max-width: 320px;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+        transition: right 0.35s ease;
+        z-index: 100;
+        border: none;
+    }
+
+    nav#navmenu.active {
+        right: 0;
+    }
+
+    nav#navmenu a {
+        font-size: 1.4rem;
+        padding: 10px 24px;
+        border: 1px solid rgba(145, 190, 20, 0.5);
+        width: 80%;
+        text-align: center;
+    }
+
+    /*Hamburger → X animation when menu is open*/
+    #hambutton.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #hambutton.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hambutton.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    footer {
+        background-color: var(--primary-color);
+        font-size: 0.85rem;
+    }
+}
