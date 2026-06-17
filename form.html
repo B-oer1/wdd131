@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
-    <meta name="description" content="WDD 131 Product review for week 5">
+    <meta name="description" content="WDD 131 | Basic Fundamentals in Web Development| Product review form for week 5">
     <meta name="author" content="Oladele Blessed">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/form-large.css">
-    <script src="scripts/siteplan.js" defer></script>
+    <script src="scripts/form.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,7 +26,7 @@
             <h2>Product Review Form</h2>
             <p class="form-instruction">Fields marked with <span class="req">*</span> are explicitly required.</p>
             
-            <form method="get" action="reviews.html" id="reviewForm" class="styled-form">
+            <form method="get" action="review.html" id="reviewForm" class="styled-form">
                 <div class="form-group">
                     <label for="productName">Target Reading Track <span class="req">*</span></label>
                     <select id="productName" name="productName" required>
@@ -38,10 +38,10 @@
                     <label>Overall Tracker Rating <span class="req">*</span></label>
                     <div class="star-rating-group" role="radiogroup" aria-label="Star rating selection">
                         <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">☆</label>
-                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">☆</label>
-                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">☆</label>
-                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">☆</label>
-                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">☆</label>
+                        <input type="radio" id="star4" name="rating" value="4" required><label for="star4" title="4 stars">☆</label>
+                        <input type="radio" id="star3" name="rating" value="3" required><label for="star3" title="3 stars">☆</label>
+                        <input type="radio" id="star2" name="rating" value="2" required><label for="star2" title="2 stars">☆</label>
+                        <input type="radio" id="star1" name="rating" value="1" required><label for="star1" title="1 star">☆</label>
                     </div>
                 </div>
 
@@ -53,9 +53,10 @@
                 <div class="form-group">
                     <label>Highly Useful Infrastructure Features</label>
                     <div class="checkbox-row">
-                        <label class="check-label"><input type="checkbox" name="features" value="accordion"> Multi-Accordion Views</label>
-                        <label class="check-label"><input type="checkbox" name="features" value="localstorage"> LocalStorage Mirroring</label>
-                        <label class="check-label"><input type="checkbox" name="features" value="metrics"> Real-time Performance Metrics</label>
+                        <input type="checkbox" name="features" id="cb1" value="accordion"><label class="check-label">Multi-Accordion Views</label>
+                        <input type="checkbox" name="features" id="cb2" value="localstorage"><label class="check-label">LocalStorage Mirroring</label>
+                        <input type="checkbox" name="features" id="cb3" value="metrics"><label class="check-label">Real-time Performance Metrics</label>
+                        <input type="checkbox" name="features" id="cb4" value="location"><label class="check-label">Real-time Location Metrics</label>
                     </div>
                 </div>
 
@@ -77,6 +78,7 @@
         <div class="footcon">
             <p>&copy;<span id="currentyear"></span> 🔥 Oladele Blessed 🔥 Nigeria</p>
             <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
     </footer>
 </body>
 </html>
