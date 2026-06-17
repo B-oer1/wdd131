@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="WDD 131 Product review for week 5">
+    <meta name="author" content="Oladele Blessed">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="brand-title">PRODUCT REVIEW</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Product Review Form</h2>
+            <p class="form-instruction">Fields marked with <span class="req">*</span> are explicitly required.</p>
+            
+            <form method="get" action="reviews.html" id="reviewForm" class="styled-form">
+                <div class="form-group">
+                    <label for="productName">Target Reading Track <span class="req">*</span></label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Overall Tracker Rating <span class="req">*</span></label>
+                    <div class="star-rating-group" role="radiogroup" aria-label="Star rating selection">
+                        <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">☆</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">☆</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">☆</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">☆</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">☆</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateInstall">Date of System Onboarding <span class="req">*</span></label>
+                    <input type="date" id="dateInstall" name="dateInstall" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Highly Useful Infrastructure Features</label>
+                    <div class="checkbox-row">
+                        <label class="check-label"><input type="checkbox" name="features" value="accordion"> Multi-Accordion Views</label>
+                        <label class="check-label"><input type="checkbox" name="features" value="localstorage"> LocalStorage Mirroring</label>
+                        <label class="check-label"><input type="checkbox" name="features" value="metrics"> Real-time Performance Metrics</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="writtenReview">Detailed System Feedback <span class="optional">(Optional)</span></label>
+                    <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Share your experience working through your current plan details..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewerName">Your Profile Identifier <span class="optional">(Optional)</span></label>
+                    <input type="text" id="reviewerName" name="reviewerName" placeholder="e.g. Brother Blessed">
+                </div>
+
+                <button type="submit" class="submit-button">Drop Product Review</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footcon">
+            <p>&copy;<span id="currentyear"></span> 🔥 Oladele Blessed 🔥 Nigeria</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
