@@ -111,28 +111,28 @@ const temples = [
             "https://churchofjesuschristtemples.org/assets/img/temples/chicago-illinois-temple/chicago-illinois-temple-58403-main.jpg"
     },
     {
-        templeName: "Salt Lake",
-        location: "Salt Lake City, Utah, United States",
-        dedicated: "1893, April, 6",
+        templeName: "Santiago Chile",
+        location: "Santiago, Region Metropolitana, Chile",
+        dedicated: "2006, March, 12",
         area: 253015,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-671916-main.jpg"
+            "https://churchofjesuschristtemples.org/assets/img/temples/_temp/024-Santiago-Chile-Temple.jpg"
     },
     {
-        templeName: "Hong Kong China",
-        location: "Hong Kong, China",
-        dedicated: "1996, May, 26",
-        area: 21744,
+        templeName: "Casper Woyming",
+        location: "Casper Wyoming, United States",
+        dedicated: "2024, November, 24",
+        area: 9950,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hong-kong-china/400x250/hong-kong-china-temple-lds-520131-wallpaper.jpg"
+            "https://churchofjesuschristtemples.org/assets/img/temples/casper-wyoming-temple/casper-wyoming-temple-45007-main.jpg"
     },
     {
-        templeName: "Rome Italy",
-        location: "Rome, Italy",
-        dedicated: "2019, March, 10",
-        area: 40000,
+        templeName: "Idaho Falls",
+        location: "Idaho Falls, Idaho, United States",
+        dedicated: "1940, October, 19",
+        area: 85624,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-1075606-main.jpg"
+            "https://churchofjesuschristtemples.org/assets/img/temples/idaho-falls-idaho-temple/idaho-falls-idaho-temple-55801-main.jpg"
     }
 ];
 
@@ -157,7 +157,7 @@ function createTempleCard(filteredTemples) {
 
         name.textContent = temple.templeName;
         location.innerHTML = `Location: ${temple.location}`;
-        dedication.innerHTML = `Dedicated: ${temple.dedicated}`;
+        dedication.innerHTML = `Dedicated: ${temple.dedication}`;
         area.innerHTML = `Size: ${temple.area} sq ft`;
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
@@ -174,8 +174,8 @@ function createTempleCard(filteredTemples) {
 }
 
 
-function getDedicatedYear(temple) {
-    return parseInt(temple.dedicated.split(",")[0].trim());
+function getDedicationYear(temple) {
+    return parseInt(temple.dedication.split(",")[0].trim());
 }
 
 const pageTitle = document.getElementById("page-title");
@@ -190,13 +190,13 @@ document.querySelector("#old").addEventListener("click", (e) => {
     e.preventDefault();
     // pageTitle.textContent = "Old (before 1900)";
     // createTempleCard(temples.filter(temple => { getDedicationYear(parseInt(temple.dedicated)) < 1900; console.log(temple) }));
-    createTempleCard(temples.filter(temple => getDedicatedYear(temple) < 1900));
+    createTempleCard(temples.filter(temple => getDedicationYear(temple) < 1900));
 });
 
 document.querySelector("#new").addEventListener("click", (e) => {
     e.preventDefault();
     // pageTitle.textContent = "New (after 2000)";
-    createTempleCard(temples.filter(temple => getDedicatedYear(temple) > 2000));
+    createTempleCard(temples.filter(temple => getDedicationYear(temple) > 2000));
 });
 
 document.querySelector("#large").addEventListener("click", (e) => {
